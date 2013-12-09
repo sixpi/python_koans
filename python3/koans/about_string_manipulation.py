@@ -11,7 +11,7 @@ class AboutStringManipulation(Koan):
         string = "The values are {0} and {1}".format(value1, value2)
         self.assertEqual("The values are one and 2", string)
 
-    def test_formatted_values_con_be_shown_in_any_order_or_be_repeated(self):
+    def test_formatted_values_can_be_shown_in_any_order_or_be_repeated(self):
         value1 = 'doh'
         value2 = 'DOH'
         string = "The values are {1}, {0}, {0} and {1}!".format(value1, value2)
@@ -21,7 +21,7 @@ class AboutStringManipulation(Koan):
         import math # import a standard python module with math functions
 
         decimal_places = 4
-        string = "The square root of 5 is {0:.{1}f}".format(math.sqrt(5), \
+        string = "The square root of 5 is {0:.{1}f}".format(math.sqrt(5),
             decimal_places)
         self.assertEqual("The square root of 5 is 2.2361", string)
 

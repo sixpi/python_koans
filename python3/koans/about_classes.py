@@ -9,8 +9,11 @@ class AboutClasses(Koan):
         "Dogs need regular walkies. Never, ever let them drive."
 
     def test_instances_of_classes_can_be_created_adding_parentheses(self):
+        # NOTE: The .__name__ attribute will convert the class
+        # into a string value.
         fido = self.Dog()
-        self.assertEqual(self.Dog, fido.__class__)
+        self.assertEqual(self.Dog.__name__, fido.__class__.__name__)
+
 
     def test_classes_have_docstrings(self):
         self.assertRegexpMatches(self.Dog.__doc__,
